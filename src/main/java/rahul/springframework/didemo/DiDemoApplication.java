@@ -1,17 +1,27 @@
 package rahul.springframework.didemo;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import rahul.springframework.didemo.controller.ConstructorInjectedController;
-import rahul.springframework.didemo.controller.MyController;
-import rahul.springframework.didemo.controller.PropertyInjectedController;
-import rahul.springframework.didemo.controller.SetterInjectedController;
+import org.springframework.context.annotation.ComponentScan;
+import rahul.controller.ConstructorInjectedController;
+import rahul.controller.MyController;
+import rahul.controller.PropertyInjectedController;
+import rahul.controller.SetterInjectedController;
 
 @SpringBootApplication
-public class DiDemoApplication {
+@ComponentScan(basePackages = {"rahul.controller","rahul.services"})
+public class DiDemoApplication implements InitializingBean, DisposableBean {
 
-    public static void main(String[] args) {
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("Properties are set for the beans");
+        System.out.println();
+    }
+
+    public static void main(String[] args) {               
         ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
         MyController myController = (MyController) ctx.getBean("myController");
         System.out.println(myController.hello());
@@ -20,4 +30,9 @@ public class DiDemoApplication {
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
     }
 
+
+    @Override
+    public void destroy() throws Exception {
+
+    }
 }

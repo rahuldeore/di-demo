@@ -1,9 +1,9 @@
-package rahul.springframework.didemo.controller;
+package rahul.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-import rahul.springframework.didemo.services.GreetingService;
+import rahul.services.GreetingService;
 
 /**
  * Created by Rahul on 2019-07-10

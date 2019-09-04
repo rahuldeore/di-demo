@@ -1,7 +1,7 @@
-package rahul.springframework.didemo.controller;
+package rahul.controller;
 
 import org.springframework.stereotype.Controller;
-import rahul.springframework.didemo.services.GreetingService;
+import rahul.services.GreetingService;
 
 /**
  * Created by Rahul on 2019-07-10

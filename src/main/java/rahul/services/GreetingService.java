@@ -1,4 +1,4 @@
-package rahul.springframework.didemo.services;
+package rahul.services;
 
 /**
  * Created by Rahul on 2019-07-10

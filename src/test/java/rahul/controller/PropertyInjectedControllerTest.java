@@ -1,9 +1,9 @@
-package rahul.springframework.didemo.controller;
+package rahul.controller;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import rahul.springframework.didemo.services.GreetingServiceImpl;
+import rahul.services.GreetingServiceImpl;
 
 /**
  * Created by Rahul on 2019-07-10
