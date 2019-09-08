@@ -3,7 +3,8 @@ package rahul.controller;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import rahul.services.GreetingServiceImpl;
+import rahul.springframework.didemo.controller.PropertyInjectedController;
+import rahul.springframework.didemo.services.GreetingServiceImpl;
 
 /**
  * Created by Rahul on 2019-07-10

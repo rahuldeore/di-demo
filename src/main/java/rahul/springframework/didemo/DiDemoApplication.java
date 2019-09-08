@@ -5,14 +5,13 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import rahul.controller.ConstructorInjectedController;
-import rahul.controller.MyController;
-import rahul.controller.PropertyInjectedController;
-import rahul.controller.SetterInjectedController;
+import rahul.springframework.didemo.controller.ConstructorInjectedController;
+import rahul.springframework.didemo.controller.MyController;
+import rahul.springframework.didemo.controller.PropertyInjectedController;
+import rahul.springframework.didemo.controller.SetterInjectedController;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"rahul.controller","rahul.services"})
+//@ComponentScan(basePackages = {"rahul.controller","rahul.services"})
 public class DiDemoApplication implements InitializingBean, DisposableBean {
 
     @Override
