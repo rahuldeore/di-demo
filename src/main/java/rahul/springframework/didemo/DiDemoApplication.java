@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import rahul.springframework.didemo.controller.MyController;
 import rahul.springframework.didemo.examplebeans.FakeDataSource;
+import rahul.springframework.didemo.examplebeans.FakeJmsBroker;
 
 @SpringBootApplication
 //@ComponentScan(basePackages = {"rahul.controller","rahul.services"})
@@ -24,7 +25,10 @@ public class DiDemoApplication implements InitializingBean, DisposableBean {
         MyController myController = (MyController) ctx.getBean("myController");
 
         FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
-        System.out.println(fakeDataSource.getUser() + " " + fakeDataSource.getPass() + " " + fakeDataSource.getUr());
+        System.out.println(fakeDataSource.getUser() + " " + fakeDataSource.getPass() + " " + fakeDataSource.getUrl());
+
+        FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+        System.out.println(fakeJmsBroker.getJmsUsername() + " " + fakeJmsBroker.getJmsPassword() + " " + fakeJmsBroker.getJmsUrl());
 
     }
 

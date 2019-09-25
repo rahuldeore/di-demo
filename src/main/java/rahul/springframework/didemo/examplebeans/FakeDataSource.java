@@ -6,7 +6,7 @@ package rahul.springframework.didemo.examplebeans;
 public class FakeDataSource {
     private String user;
     private String pass;
-    private String ur;
+    private String url;
 
     public String getUser() {
         return user;
@@ -24,11 +24,11 @@ public class FakeDataSource {
         this.pass = pass;
     }
 
-    public String getUr() {
-        return ur;
+    public String getUrl() {
+        return url;
     }
 
-    public void setUr(String ur) {
-        this.ur = ur;
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
