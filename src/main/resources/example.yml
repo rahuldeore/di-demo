@@ -1,0 +1,38 @@
+# this is a comment
+
+# yaml is used to describe data structures
+
+name: Rahul
+
+names: # Comment
+  - John
+  - Paul
+  - Ringo
+
+pound_sign: "#"
+
+book:
+  author: Joe Buck
+  publisher: random house
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no #NO, false, False, FALSE
+
+string_val: "This is it's quotes" # to make it as a one string
+
+colon_string: "my courses: one two three"
+
+include_new_lines: |
+  asdasd asd asd
+  asdasd asd asd asd as
+  asdasdasdasda asd asd
+
+ignore_new_lines: >
+  this is
+  just one long
+  string
